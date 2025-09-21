@@ -1,2 +1,29 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Default: treat text files as text and normalize to LF in the repo
+* text=auto eol=lf
+
+# Windows-native script files that must keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Unix scripts should be LF
+*.sh text eol=lf
+
+# Code files (explicit, optional—but helps clarity)
+*.cs     text eol=lf
+*.csproj text eol=lf
+*.sln    text eol=lf
+*.ts     text eol=lf
+*.js     text eol=lf
+*.json   text eol=lf
+*.sql    text eol=lf
+*.ps1    text eol=lf
+
+# Binary—never change line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.dll binary
+*.exe binary
